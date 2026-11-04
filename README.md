@@ -1,4 +1,4 @@
-# LOCAL STORE – Full-Stack E-Commerce App
+# LOCAL STORE – Full-Stack E-Commerce App (MERN)
 
 A complete online store for a local retail shop, built for **Prodigy Infotech – Task 03 (Full Stack Development)**.
 
@@ -12,16 +12,13 @@ Customers can browse a catalogue of **27 products**, search and filter, read and
 
 ```text
 e-commerce-app/
-├── mern/                 ← Submission: MERN stack (Express + MongoDB + React)
-│   ├── backend/          Express REST API, Mongoose models, JWT auth, seed script
-│   ├── frontend/         React 18 + Vite + Tailwind + React Router + Axios
-│   └── screenshots/
-└── (root)                Live demo version (TanStack Start + React) that runs
-                          the same screens with an in-browser demo backend
+└── mern/
+    ├── backend/        Express REST API, Mongoose models, JWT auth, seed script
+    ├── frontend/       React 18 + Vite + Tailwind CSS + React Router + Axios
+    └── screenshots/    Screenshots of the running app
 ```
 
-- **`mern/`** is the project to run and review as the MERN submission.
-- **The root app** is the online demo. It shares the same pages and components (`src/store`) but stores data in the browser instead of MongoDB, so it runs with no server.
+The whole project lives in `mern/`: the Express + MongoDB API in `mern/backend`, the React site in `mern/frontend`. A step-by-step guide is in [`mern/README.md`](mern/README.md).
 
 ---
 
@@ -54,11 +51,10 @@ e-commerce-app/
 | --- | --- |
 | Frontend | React 18, Vite, Tailwind CSS v4, React Router DOM, Axios, Context API, Lucide icons |
 | Backend | Node.js, Express.js, MongoDB, Mongoose, JWT, bcryptjs |
-| Demo app | TanStack Start, React 19, browser storage |
 
 ---
 
-## Running the MERN project
+## Running the project
 
 **Requirements:** Node.js 18+ and MongoDB (local or MongoDB Atlas).
 
@@ -96,22 +92,11 @@ Make an account an admin:
 npm run make-admin -- you@example.com
 ```
 
-Full API and setup details: [`mern/README.md`](mern/README.md).
+Full setup and API details: [`mern/README.md`](mern/README.md).
 
 ---
 
-## Running the demo app
-
-```bash
-bun install      # or npm install
-bun run dev      # opens on http://localhost:8080
-```
-
-Demo admin login: `admin@localstore.com` / `admin123`
-
----
-
-## Main API endpoints (MERN backend)
+## Main API endpoints
 
 | Method | Endpoint | Access |
 | --- | --- | --- |
