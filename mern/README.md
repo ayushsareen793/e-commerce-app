@@ -1,6 +1,6 @@
 # LOCAL STORE – Full-Stack MERN E-Commerce Platform
 
-LOCAL STORE is a complete e-commerce website for a local retail store, built with the **MERN stack** (MongoDB, Express, React, Node.js) as part of **Prodigy Infotech – Task 03**.
+LOCAL STORE is a complete e-commerce website for a local retail store, built with the **MERN stack** (MongoDB, Express, React, Node.js) as part of **Task 03 (Full Stack Development)**.
 
 Customers can browse products, search and filter, read and write reviews, manage a cart, and place Cash on Delivery orders. Administrators get a separate dashboard to manage products, stock and orders.
 
@@ -194,4 +194,4 @@ Add your screenshots to a `screenshots/` folder and reference them here:
 
 ---
 
-© LOCAL STORE – built for Prodigy Infotech Task 03.
+© LOCAL STORE – Full Stack Development, Task 03.

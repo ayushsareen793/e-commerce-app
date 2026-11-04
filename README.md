@@ -1,6 +1,6 @@
 # LOCAL STORE – Full-Stack E-Commerce App (MERN)
 
-A complete online store for a local retail shop, built for **Prodigy Infotech – Task 03 (Full Stack Development)**.
+A complete online store for a local retail shop, built as a **Full Stack Development** project (Task 03).
 
 Customers can browse a catalogue of **27 products**, search and filter, read and write reviews, manage a cart and place **Cash on Delivery** orders. Admins get a dashboard to manage products, stock and orders.
 
@@ -128,4 +128,4 @@ Full setup and API details: [`mern/README.md`](mern/README.md).
 
 ## Author
 
-**Ayush Sareen** — Prodigy Infotech Full Stack Development Internship, Task 03.
+**Ayush Sareen** — Full Stack Development Internship, Task 03.
