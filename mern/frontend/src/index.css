@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* LOCAL STORE design system */
+@theme {
+  --color-bg: #f7f4ee;          /* warm off-white */
+  --color-surface: #ffffff;
+  --color-sand: #ece6db;        /* neutral accent */
+  --color-line: #e3ddd1;
+  --color-ink: #23231f;         /* charcoal text */
+  --color-muted: #6b6a62;
+  --color-brand: #1f4d3a;       /* forest green */
+  --color-brand-dark: #163a2b;
+  --color-brand-soft: #e3ece6;
+  --color-star: #d39a2c;
+  --color-danger: #b4432f;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --shadow-soft: 0 1px 2px rgb(35 35 31 / 0.04), 0 8px 24px -12px rgb(35 35 31 / 0.12);
+}
+
+body { background: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); }
+
+@utility container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+@utility btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50; }
+@utility btn-primary { @apply btn bg-brand text-bg hover:bg-brand-dark; }
+@utility btn-outline { @apply btn border border-line bg-surface text-ink hover:border-ink; }
+@utility btn-ghost { @apply btn text-ink hover:bg-sand; }
+@utility btn-danger { @apply btn bg-danger text-bg hover:opacity-90; }
+@utility card { @apply rounded-2xl border border-line bg-surface shadow-soft; }
+@utility input { @apply w-full rounded-xl border border-line bg-surface px-4 py-2.5 text-sm outline-none transition placeholder:text-muted focus:border-brand focus:ring-2 focus:ring-brand/15; }
+@utility label { @apply mb-1.5 block text-sm font-medium; }
+@utility heading { @apply font-display font-semibold tracking-tight; }
+@utility badge { @apply inline-flex items-center rounded-full bg-sand px-2.5 py-0.5 text-xs font-medium text-ink; }

@@ -1,1 +1,146 @@
-IyBXZWxjb21lIHRvIHlvdXIgTG92YWJsZSBwcm9qZWN0CgpUaGlzIHByb2plY3Qgd2FzIGJ1aWx0IHdpdGggW0xvdmFibGVdKGh0dHBzOi8vbG92YWJsZS5kZXYpLgoKIyMgQnVpbGQgd2l0aCBMb3ZhYmxlCgpPcGVuIHlvdXIgcHJvamVjdCBpbiB0aGUgW0xvdmFibGUgZWRpdG9yXShodHRwczovL2xvdmFibGUuZGV2KSBhbmQga2VlcCBidWlsZGluZy4KCi0gKipTaGlwIGZhc3RlcioqOiBkZXNjcmliZSB3aGF0IHlvdSB3YW50IHRvIGJ1aWxkIGFuZCBMb3ZhYmxlIGhhbmRsZXMgdGhlIGNvZGUuCi0gKipTdGF5IGluIHN5bmMqKjogY29ubmVjdCB0aGUgcHJvamVjdCB0byBHaXRIdWIgYW5kIGV2ZXJ5IGNoYW5nZSBtYWRlIGluIExvdmFibGUgaXMgY29tbWl0dGVkIHN0cmFpZ2h0IHRvIHlvdXIgcmVwb3NpdG9yeS4KLSAqKkZ1bGwgb3duZXJzaGlwKio6IHRoaXMgY29kZSBpcyB5b3Vycy4gUHVzaCB0byB5b3VyIHJlcG9zaXRvcnkgYW5kIHlvdXIgY2hhbmdlcyBzeW5jIGJhY2sgaW50byBMb3ZhYmxlLCByZWFkeSBmb3IgeW91ciBuZXh0IHByb21wdC4KCiMjIERldmVsb3BtZW50CgpQcmVmZXIgd29ya2luZyBsb2NhbGx5PyBZb3UgbmVlZCBOb2RlLmpzIGFuZCBucG0g4oCUIFtpbnN0YWxsIHdpdGggbnZtXShodHRwczovL2dpdGh1Yi5jb20vbnZtLXNoL252bSNpbnN0YWxsaW5nLWFuZC11cGRhdGluZykuCgpgYGBzaApnaXQgY2xvbmUgPHRoaXMtcmVwb3NpdG9yeS11cmw+CmNkIDxyZXBvc2l0b3J5LW5hbWU+Cm5wbSBpCm5wbSBydW4gZGV2CmBgYAoKIyMgQnVpbHQgd2l0aAoKLSBUYW5TdGFjayBTdGFydAotIFR5cGVTY3JpcHQKLSBSZWFjdAotIFRhaWx3aW5kIENTUwo=
+# LOCAL STORE – Full-Stack E-Commerce App
+
+A complete online store for a local retail shop, built for **Prodigy Infotech – Task 03 (Full Stack Development)**.
+
+Customers can browse a catalogue of **27 products**, search and filter, read and write reviews, manage a cart and place **Cash on Delivery** orders. Admins get a dashboard to manage products, stock and orders.
+
+![Home page](mern/screenshots/home.png)
+
+---
+
+## Repository layout
+
+```text
+e-commerce-app/
+├── mern/                 ← Submission: MERN stack (Express + MongoDB + React)
+│   ├── backend/          Express REST API, Mongoose models, JWT auth, seed script
+│   ├── frontend/         React 18 + Vite + Tailwind + React Router + Axios
+│   └── screenshots/
+└── (root)                Live demo version (TanStack Start + React) that runs
+                          the same screens with an in-browser demo backend
+```
+
+- **`mern/`** is the project to run and review as the MERN submission.
+- **The root app** is the online demo. It shares the same pages and components (`src/store`) but stores data in the browser instead of MongoDB, so it runs with no server.
+
+---
+
+## Features
+
+**Customer**
+- Home page with hero, categories, trending products and promo banner
+- Shop page with live search, category filter, price sort and reset
+- Product details with stock, quantity selector, ratings and reviews
+- Cart with quantity controls, totals and item-count badge
+- Checkout with validated shipping form and Cash on Delivery
+- Order confirmation and **My Orders** history with status
+- Register / Login / Logout (JWT), protected routes, profile page
+
+**Admin**
+- Dashboard stats: products, orders, customers, total sales
+- Add, edit, delete products and update stock
+- View all orders and change status (Pending → Processing → Shipped → Delivered / Cancelled)
+- Placing an order reduces stock; cancelling returns it
+
+**Optional features**
+1. Backend product sorting & filtering via query parameters
+2. Product reviews & ratings (one review per user per product, average updates automatically)
+
+---
+
+## Tech stack
+
+| Layer | Technology |
+| --- | --- |
+| Frontend | React 18, Vite, Tailwind CSS v4, React Router DOM, Axios, Context API, Lucide icons |
+| Backend | Node.js, Express.js, MongoDB, Mongoose, JWT, bcryptjs |
+| Demo app | TanStack Start, React 19, browser storage |
+
+---
+
+## Running the MERN project
+
+**Requirements:** Node.js 18+ and MongoDB (local or MongoDB Atlas).
+
+```bash
+cd mern
+npm run install:all
+```
+
+Copy `mern/backend/.env.example` to `mern/backend/.env`:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/local-store
+JWT_SECRET=change_this_secret
+CLIENT_URL=http://localhost:5173
+```
+
+Copy `mern/frontend/.env.example` to `mern/frontend/.env`:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Seed the 27 products and start both servers (two terminals):
+
+```bash
+npm run seed           # loads sample products
+npm run dev:backend    # API on http://localhost:5000
+npm run dev:frontend   # site on http://localhost:5173
+```
+
+Make an account an admin:
+
+```bash
+npm run make-admin -- you@example.com
+```
+
+Full API and setup details: [`mern/README.md`](mern/README.md).
+
+---
+
+## Running the demo app
+
+```bash
+bun install      # or npm install
+bun run dev      # opens on http://localhost:8080
+```
+
+Demo admin login: `admin@localstore.com` / `admin123`
+
+---
+
+## Main API endpoints (MERN backend)
+
+| Method | Endpoint | Access |
+| --- | --- | --- |
+| POST | `/api/auth/register`, `/api/auth/login` | Public |
+| GET | `/api/auth/me` | User |
+| GET | `/api/products?search=&category=&sort=` | Public |
+| GET | `/api/products/:id` | Public |
+| POST / PUT / DELETE | `/api/products(/:id)` | Admin |
+| POST | `/api/orders` | User |
+| GET | `/api/orders/my-orders` | User |
+| GET | `/api/orders` | Admin |
+| PUT | `/api/orders/:id/status` | Admin |
+| GET / POST | `/api/reviews/:productId` | Public / User |
+| GET | `/api/admin/stats` | Admin |
+
+---
+
+## Screenshots
+
+| Shop | Product | Cart |
+| --- | --- | --- |
+| ![Shop](mern/screenshots/shop.png) | ![Product](mern/screenshots/product.png) | ![Cart](mern/screenshots/cart.png) |
+
+| Checkout | Admin dashboard |
+| --- | --- |
+| ![Checkout](mern/screenshots/checkout.png) | ![Admin](mern/screenshots/admin.png) |
+
+---
+
+## Author
+
+**Ayush Sareen** — Prodigy Infotech Full Stack Development Internship, Task 03.
