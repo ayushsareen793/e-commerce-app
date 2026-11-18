@@ -80,8 +80,8 @@ local-store-ecommerce/
 Requirements: **Node.js 18+** and **MongoDB** (local install or a free MongoDB Atlas cluster).
 
 ```bash
-git clone <your-repo-url>
-cd local-store-ecommerce
+git clone https://github.com/ayushsareen793/e-commerce-app.git
+cd e-commerce-app/mern
 npm run install:all
 ```
 
@@ -111,7 +111,7 @@ VITE_API_URL=http://localhost:5000/api
 ```bash
 npm run seed
 ```
-Inserts 15 products across Electronics, Fashion, Home & Living and Accessories (existing products and reviews are cleared).
+Inserts **27 products** across Electronics, Fashion, Home & Living and Accessories (existing products and reviews are cleared).
 
 ## Run the Backend
 
@@ -182,7 +182,7 @@ Errors are returned as `{ "message": "..." }` with proper status codes (400, 401
 
 ## Screenshots
 
-Add your screenshots to a `screenshots/` folder and reference them here:
+Screenshots from the running app:
 
 | Home | Shop | Product |
 | --- | --- | --- |
