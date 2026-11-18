@@ -59,7 +59,8 @@ The whole project lives in `mern/`: the Express + MongoDB API in `mern/backend`,
 **Requirements:** Node.js 18+ and MongoDB (local or MongoDB Atlas).
 
 ```bash
-cd mern
+git clone https://github.com/ayushsareen793/e-commerce-app.git
+cd e-commerce-app/mern
 npm run install:all
 ```
 
